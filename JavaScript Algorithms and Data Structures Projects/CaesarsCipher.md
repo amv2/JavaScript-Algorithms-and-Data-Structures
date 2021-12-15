@@ -11,7 +11,7 @@ All letters will be uppercase. Do not transform any non-alphabetic character (i.
 
 
 ### Solution
-'''javascript
+```javascript
 function rot13(str) {
   let alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
   str = str.split('');
@@ -26,4 +26,4 @@ function rot13(str) {
 }
 
 rot13("SERR PBQR PNZC");
-'''
+```
