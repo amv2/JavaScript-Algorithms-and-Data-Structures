@@ -61,12 +61,7 @@ function checkCashRegister(price, cash, cid) {
       remainder[i][1] += bills[i];
     }
   }
-  for (let i=0; i<remainder.length; i++) {
-    if (remainder[i][1] == 0) {
-      remainder.splice(i,1);
-      i = -1;
-    }
-  }
+  remainder = remainder.filter(value => value[1] != 0);
   return {status: "OPEN", change: remainder};
 }
 
