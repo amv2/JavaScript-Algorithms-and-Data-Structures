@@ -15,7 +15,7 @@ We'll also pass strings with special symbols, such as 2A3*3a2, 2A3 3a2, and 2_A3
 ### Solution
 ```javascript
 function palindrome(str) {
-  str = str.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").toLowerCase().replace(/\s+/g, '');;
+  str = str.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").toLowerCase().replace(/\s+/g, '');
   return (str == str.split("").reverse().join(""));
 }
 
