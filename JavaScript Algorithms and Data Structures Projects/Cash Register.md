@@ -53,7 +53,7 @@ function checkCashRegister(price, cash, cid) {
 
   let bills = [100, 20, 10, 5, 1, 0.25, 0.10, 0.05, 0.01];
   cid = cid.reverse();
-  remainder = [['ONE HUNDRED', 0 ], ['TWENTY', 0 ], ['TEN', 0 ], ['FIVE', 0 ], ['ONE', 0], ['QUARTER', 0 ], ['DIME', 0 ], ['NICKEL', 0 ], ['PENNY', 0 ]];
+  remainder = cid.reduce(value => value[1] = 0);
   for (let i=0; i<bills.length; i++) {
     while(change - bills[i] >= -0.001 && cid[i][1] >= bills[i]) {
       change -= bills[i];
